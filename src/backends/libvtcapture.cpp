@@ -52,7 +52,7 @@ int capture_init(cap_backend_config_t* config, void** state_p)
 
     // Sorry, no unlimited fps for you.
     self->props.frm = config->fps == 0 ? 120 : config->fps;
-    self->props.dump = 0.5;
+    self->props.dump = 4;
     self->props.loc.x = 0;
     self->props.loc.y = 0;
     self->props.reg.w = config->resolution_width;
