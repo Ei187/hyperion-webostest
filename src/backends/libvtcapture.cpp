@@ -52,12 +52,12 @@ int capture_init(cap_backend_config_t* config, void** state_p)
 
     // Sorry, no unlimited fps for you.
     self->props.frm = config->fps == 0 ? 60 : config->fps;
-    self->props.dump = -1;
-    self->props.loc.x = 0;
-    self->props.loc.y = 0;
+    self->props.dump = 3;
+    self->props.loc.x = 3;
+    self->props.loc.y = 3;
     self->props.reg.w = config->resolution_width;
     self->props.reg.h = config->resolution_height;
-    self->props.buf_cnt = 2;
+    self->props.buf_cnt = 3;
 
     if (HAS_QUIRK(config->quirks, QUIRK_VTCAPTURE_FORCE_CAPTURE)) {
         self->quirk_force_capture = true;
