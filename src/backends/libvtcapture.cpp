@@ -51,8 +51,8 @@ int capture_init(cap_backend_config_t* config, void** state_p)
     INFO("Driver created!");
 
     // Sorry, no unlimited fps for you.
-    self->props.frm = config->fps == 0 ? 60 : config->fps;
-    self->props.dump = 3;
+    self->props.frm = config->fps == 0 ? 120 : config->fps;
+    self->props.dump = 5;
     self->props.loc.x = 0;
     self->props.loc.y = 0;
     self->props.reg.w = config->resolution_width;
